@@ -1,0 +1,79 @@
+/* 1. What is the Specificity Algorithm in CSS? */
+
+/* The Specificity Algorithm in CSS is the rule the browser uses to decide which CSS style should be applied when multiple selectors target the same HTML element. */
+
+/* In simple words: */
+
+/* It decides which CSS rule is stronger and should win. */
+/* Higher specificity = higher priority. */
+
+/* How Specificity Works (Algorithm Formula) */
+
+/* CSS calculates specificity using a 4-level system: */
+
+/* (a , b , c , d) */
+
+/* Level Meaning Examples */
+
+/* a Inline styles style="color:red" */
+/* b ID selectors #box */
+/* c Class selectors, attribute selectors, pseudo-classes .title, [type="text"], :hover */
+/* d Tag selectors & pseudo-elements p, h1, ::before */
+
+/* The browser compares selectors using this order: */
+
+/* 1. Compare a (inline) */
+/* 2. If equal → compare b */
+/* /* 3. If equal → compare c */ 
+/* 4. If equal → compare d */
+/* 5. If still equal → last CSS rule wins */
+
+/* Specificity Power Ranking (Highest → Lowest) */
+
+/* 1. Inline CSS */
+/* 2. ID selector (#id) */
+/* 3. Class selector (.class), attributes, pseudo-classes */
+/* 4. Tag selector (p, div, h1) → lowest */
+
+/* Example of Specificity Algorithm */
+
+/* HTML */
+
+<p id="main" class="big-text">Hello CSS</p>
+
+/* CSS */
+
+p {
+  color: blue;
+}
+
+.big-text {
+  color: green;
+}
+
+#main {
+  color: red;
+}
+
+<p style="color: purple;">Hello CSS</p>  /* inline */
+
+/* Specificity Calculation */
+
+/*   Selector                 Specificity                         Priority  */
+
+/*   p                        (0,0,0,1)                           lowest    */
+/*   .big-text                (0,0,1,0)                           higher    */
+/*   #main                    (0,1,0,0)                           very high */
+/*   inline style             (1,0,0,0)                           highest */
+
+
+/* Final Result: */
+
+/* Inline style wins */
+/* If inline not present → ID wins */
+/* If ID not present → class wins */
+/* If no class → tag selector wins */
+
+/* One-line summary for interview */
+
+/* Specificity algorithm decides which CSS rule wins by calculating selector strength using (inline > ID > class > tag). */

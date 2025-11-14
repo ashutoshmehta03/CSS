@@ -1,0 +1,107 @@
+/* 1. What is CSS? */
+
+/* CSS stands for Cascading Style Sheets.
+It is used to style the HTML content of a webpage — meaning it controls colors, size, layout, fonts, spacing, animations, and overall design.
+
+/* In simple words: HTML makes the structure, CSS makes it beautiful. */
+
+2. Role of CSS (Why CSS is used?)
+
+CSS is used for:
+
+1. Designing the webpage
+
+Colors
+Fonts
+Backgrounds
+Borders
+
+2. Layout / Positioning
+
+Placing elements side-by-side
+Making grids & flex layouts
+Responsive designs
+
+3. Improving user experience
+
+Hover effects
+Transitions
+Smooth animations
+
+4. Responsive Design
+
+Making websites look good on mobile, tablet, laptop
+
+5. Separating Design from Structure
+
+HTML = content
+CSS = design
+JS = behavior
+This separation makes code clean and easy to maintain.
+
+3. CSS Definition (Simple)
+
+CSS is a styling language used to make webpages beautiful by controlling colors, fonts, layout, and overall design.
+
+CSS Example:
+
+HTML without CSS
+
+<h1>Hello World</h1>
+<p>This is a normal paragraph.</p>
+<button>Click Me</button>
+
+This will look plain and unattractive.
+-->
+
+
+<!-- HTML with CSS -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1 {
+      color: blue;
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      color: #444;
+    }
+
+    button {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Hello World</h1>
+  <p>This paragraph is styled with CSS.</p>
+  <button>Click Me</button>
+</body>
+</html>
+
+<!--  Output Explanation
+
+Heading turns blue & centered
+Paragraph gets bigger and darker
+Button gets:
+
+Black background
+White text
+Padding
+Rounded corners
+Hover effect
+-->

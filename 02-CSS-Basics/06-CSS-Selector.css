@@ -1,0 +1,152 @@
+/* 1. INLINE CSS */
+
+/* Inline CSS is a type of CSS where styling is written directly inside an HTML tag using the style attribute. */
+/* It applies the style to only that specific element. */
+
+/* Explanation (Simple & Professional) */
+
+/* Inline CSS is written inside the opening tag of an element. */
+/* It affects only one element at a time. */
+/* It has the highest priority compared to external, internal, class, ID, and tag selectors. */
+/* It is used for quick changes or testing, not for big projects. */
+
+/* Syntax */
+
+/* HTML */
+
+<tagname style="property: value;">
+
+/* Example */
+
+<p style="color: blue; font-size: 20px;">
+  This is a paragraph with inline CSS.
+</p>
+
+/* ✔ Explanation: */
+
+/* p = HTML tag */
+/* style="color: blue; font-size: 20px;" = Inline CSS */
+/* Only this <p> element will get: */
+/* blue text */
+/* font-size 20px */
+/* No other paragraph will be affected. */
+
+/* 2. TAG SELECTOR (Element Selector)
+
+A Tag Selector selects HTML elements using the HTML tag name.
+It targets all elements of that tag.
+
+Explanation
+
+If you write a CSS rule using a tag name (like p, h1, div), the style will apply to every element of that type on the page.
+
+Example: */
+
+/* CSS: */
+
+h1 {
+  color: blue;
+  text-align: center;
+}
+
+/* HTML: */
+
+<h1>Heading One</h1>
+<h1>Another Heading</h1>
+
+/* Output
+
+Both <h1> elements become blue and center aligned. */
+
+/* 3. CLASS SELECTOR (.)
+
+A Class Selector selects HTML elements using the class attribute.
+
+It starts with a dot (.).
+
+Explanation
+
+A class can be applied to multiple elements.
+Used for styling a group of elements with the same design.
+Most commonly used selector in real-world websites. */
+
+/* Types of Class Usage  */
+
+/* HTML */
+
+/* a) Single Class */
+
+<p class="text">Hello</p>
+
+/* b) Multiple Classes on One Element */
+
+<p class="text highlight">Hello</p>
+
+/* c) Same Class on Many Elements */
+
+<button class="btn">Save</button>
+<button class="btn">Cancel</button>
+
+/* Example */
+
+/* CSS: */
+
+.title {
+  color: red;
+  font-weight: bold;
+}
+
+/* HTML: */
+
+<h2 class="title">Welcome</h2>
+<p class="title">This paragraph also uses the title class.</p>
+
+/* Output
+
+Both elements become red and bold. */
+
+/* 4. ID SELECTOR (#) */
+
+/* An ID Selector selects an element using a unique ID attribute.
+
+It starts with a hash (#). */
+
+/* Explanation
+
+An ID should be used only once per page.
+
+Used for unique elements like:
+
+header
+footer
+navigation
+main section
+
+ID has highest priority compared to tag and class selectors. */
+
+/* Types of ID Usage */
+
+/* (Only one way, because ID must be unique) */
+
+<div id="main">This is unique.</div>
+
+/* Example */
+
+/* CSS: */
+
+#main {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+/* HTML: */
+
+<div id="main">Main Section</div>
+
+/* Output */
+
+/* This element has:
+black background
+white text
+padding */

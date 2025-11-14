@@ -1,0 +1,18 @@
+/* Styles.css */
+
+h1 {
+  color: red;
+  font-size: 40px;
+}
+
+/* When to Use
+
+Professional projects
+Multiple pages
+Cleaner and faster websites
+Easy maintenance and teamwork
+
+Disadvantages
+
+Needs internet if CDN is used
+One extra file to manage */
